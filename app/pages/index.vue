@@ -130,7 +130,7 @@ const skills = [
         </p>
       </div>
 
-      <NuxtImg src="/me.jpeg" class="rounded-full w-56 h-56 object-cover" />
+      <img src="/me.jpeg" class="rounded-full w-56 h-56 object-cover" />
     </section>
     <section
       id="skills"
