@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: true },
   app: {
-    baseURL: process.env.GITHUB_PAGES ? '/portfolio/' : '/',
+    baseURL: '/portfolio/',
   },
   modules: [
     '@nuxt/eslint',
