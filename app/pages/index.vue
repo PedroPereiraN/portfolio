@@ -93,7 +93,11 @@ const skills = [
       <RouterLink to="/#hero-section"> Pedro Alves Pereira Neto </RouterLink>
     </template>
 
-    <UNavigationMenu :items="items" />
+    <nav class="flex gap-4">
+      <UButton variant="link" color="neutral" to="/#about">About</UButton>
+      <UButton variant="link" color="neutral" to="/#skills">Skills</UButton>
+      <UButton variant="link" color="neutral" to="/#projects">Personal Projects</UButton>
+    </nav>
   </UHeader>
   <main>
     <section
