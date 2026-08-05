@@ -98,13 +98,13 @@ const skills = [
   <main>
     <section
       id="hero-section"
-      class="relative flex items-center min-w-screen min-h-screen overflow-hidden bg-[url('/hero-bg.png')] bg-cover bg-center"
+      class="relative flex items-center min-w-screen min-h-screen overflow-hidden bg-[url('/hero-bg5.png')] bg-cover bg-center"
     >
       <div
         class="w-3/5 flex flex-col items-center justify-center py-20 px-10 bg-gradient-to-r from-background via-background/80 to-transparent"
       >
         <h1 class="font-bold text-3xl">I love coding</h1>
-        <p class="text-center">
+        <p class="w-5/6 text-center">
           I am a programmer who thrives on the challenges that come with writing
           code. Planning, problem-solving, and pushing through complexity,
           that's what drives me. I never get tired of learning, and I firmly
