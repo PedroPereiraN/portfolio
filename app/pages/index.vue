@@ -82,7 +82,10 @@ const skillGroups = [
 <template>
   <UHeader :ui="{ toggle: 'hidden' }">
     <template #title>
-      <RouterLink to="/#hero-section">Pedro Alves Pereira Neto</RouterLink>
+      <RouterLink to="/#hero-section">
+        <span class="md:hidden">Pedro</span>
+        <span class="hidden md:inline">Pedro Alves Pereira Neto</span>
+      </RouterLink>
     </template>
 
     <nav class="hidden md:flex items-center gap-4">
