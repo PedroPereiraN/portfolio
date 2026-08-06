@@ -12,21 +12,6 @@ const { data: projects } = await useFetch<Project[]>(
   "https://api.github.com/users/pedropereiran/repos",
 );
 
-const items = computed<NavigationMenuItem[]>(() => [
-  {
-    label: "About",
-    to: "/#about",
-  },
-  {
-    label: "Skills",
-    to: "/#skills",
-  },
-  {
-    label: "Personal Projects",
-    to: "/#projects",
-  },
-]);
-
 const skills = [
   {
     label: "HTML",
@@ -96,54 +81,24 @@ const skills = [
     <nav class="flex gap-4">
       <UButton variant="link" color="neutral" to="/#about">About</UButton>
       <UButton variant="link" color="neutral" to="/#skills">Skills</UButton>
-      <UButton variant="link" color="neutral" to="/#projects">Personal Projects</UButton>
+      <UButton variant="link" color="neutral" to="/#projects"
+        >Personal Projects</UButton
+      >
     </nav>
   </UHeader>
-  <main>
+  <main class="overflow-x-hidden">
     <section
       id="hero-section"
-      class="relative flex items-center min-w-screen min-h-screen overflow-hidden bg-[url('/hero-bg5.png')] bg-cover bg-center"
+      class="flex items-center justify-center min-w-screen min-h-screen overflow-x-hidden"
     >
-      <div
-        class="w-3/5 flex flex-col items-center justify-center py-20 px-10 bg-gradient-to-r from-background via-background/80 to-transparent"
-      >
-        <h1 class="font-bold text-3xl">I love coding</h1>
-        <p class="w-5/6 text-center">
-          I am a programmer who thrives on the challenges that come with writing
-          code. Planning, problem-solving, and pushing through complexity,
-          that's what drives me. I never get tired of learning, and I firmly
-          believe there's no problem that can't be solved.
+      <div class="w-2/6">
+        <h1 class="font-bold text-7xl">Pedro Alves Pereira Neto</h1>
+        <p class="text-2xl">
+          A programmer who thrives on challenges, writes clean and performant
+          code, and never stops learning.
         </p>
-
-        <div class="mt-10 flex flex-col items-center gap-2">
-          <p>More about me:</p>
-          <div class="flex gap-1">
-            <UButton
-              icon="i-simple-icons-github"
-              color="neutral"
-              variant="ghost"
-              to="https://go.nuxt.com/discord"
-              target="_blank"
-              aria-label="Github"
-            />
-            <UButton
-              icon="i-simple-icons-linkedin"
-              color="neutral"
-              variant="ghost"
-              to="https://go.nuxt.com/x"
-              target="_blank"
-              aria-label="LinkedIn"
-            />
-            <UButton
-              icon="i-simple-icons-gmail"
-              color="neutral"
-              variant="ghost"
-              to="emailto:peapn.13@gmail.com"
-              aria-label="Email"
-            />
-          </div>
-        </div>
       </div>
+      <HeroTerminal />
     </section>
 
     <section
@@ -230,7 +185,7 @@ const skills = [
         icon="i-simple-icons-github"
         color="neutral"
         variant="ghost"
-        to="https://go.nuxt.com/discord"
+        to="https://github.com/PedroPereiraN"
         target="_blank"
         aria-label="Github"
       />
@@ -238,7 +193,7 @@ const skills = [
         icon="i-simple-icons-linkedin"
         color="neutral"
         variant="ghost"
-        to="https://go.nuxt.com/x"
+        to="https://linkedin.com/in/pedropereiran"
         target="_blank"
         aria-label="linkedin"
       />
