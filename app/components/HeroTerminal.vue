@@ -1,8 +1,10 @@
 <script setup lang="ts">
 const terminal = ref<HTMLDivElement>();
 let resizeObserver: ResizeObserver | null = null;
+const isMobile = ref(false);
 
 onMounted(async () => {
+  isMobile.value = window.innerWidth < 768;
   const { Terminal } = await import("xterm");
   const { FitAddon } = await import("@xterm/addon-fit");
   await import("xterm/css/xterm.css");
@@ -86,16 +88,14 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="w-3/6 h-4/5" style="perspective: 1200px">
+  <div class="w-full h-[50vh] md:h-[60vh] lg:h-[70vh]" :style="{ perspective: '1200px' }">
     <div
       class="w-full h-full backdrop-blur-md bg-white/5 border border-white/15 rounded-2xl overflow-hidden p-4"
-      style="
-        transform: rotateY(-18deg) rotateX(3deg);
-        transform-style: preserve-3d;
-        box-shadow:
-          20px 20px 60px rgba(0, 0, 0, 0.5),
-          -4px 0 20px rgba(0, 0, 0, 0.3);
-      "
+      :style="{
+        transform: isMobile ? 'none' : 'rotateY(-18deg) rotateX(3deg)',
+        transformStyle: 'preserve-3d',
+        boxShadow: '20px 20px 60px rgba(0,0,0,0.5), -4px 0 20px rgba(0,0,0,0.3)',
+      }"
     >
       <div ref="terminal"></div>
     </div>
